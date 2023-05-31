@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="srcript.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>portifolio</title>
+</head>
+<body id="page" onscroll="open_ft()">
+    <header>
+        
+        <h1 class="nome">portifolio/></h1>
+        
+        <nav id="removeBT">
+            <ul>
+                <a href="prjetos/projetos.html" class="link">progetos</a>
+                <a href="https://www.linkedin.com/in/miguel-alves-018357257/" class="link" >linkedin</a>
+                <a href="https://github.com/migu3ll1" class="link">github</a>
+            </ul>
+            <img src="imagens/listed-items_icon-icons.com_53953 (3).png" alt="botão de menu" class="menu_nav" onclick="navBar()">
+        </nav>
+    </header>
+    <div class="nav_mobile">
+        <img src="imagens/menu_left_outline_icon_139383.png" alt="icone para fechar o menu" class="bt_menu_remove" onclick="navclose()">
+        <div class="nav_links">
+            <a href="prjetos/projetos.html" class="links2">progetos</a>
+            <a href="https://www.linkedin.com/in/miguel-alves-018357257/" class="links2">linkedin</a>
+            <a href="https://github.com/migu3ll1" class="links2">github</a>
+        </div>
+    </div>
+
+        <section class="area1">
+            <div class="sub_ar1" onmouseenter="blurCaixa()" onmouseout="removeblur()">
+                <h1 onmouseenter="blurCaixa()" onmouseout="removeblur()">sobre</h1>
+                <p onmouseenter="blurCaixa()" onmouseout="removeblur()">Olá meu nome e Miguel, me destaco principalmente pelo meu bom trabalho em equipe e minha boa convivevncia com a maioria das pessoas, por estar no meio da tecnologia tento me manter sempre atualizado com relação as tecnologias e novidaes do mercado, com um aprendizado contínuo sempre procurando aprender coisas e tecnologias novas que me ajudem a melhorar cada vez mais</p>
+            </div>
+            <div class="sub_ar2" onmouseenter="blurCaixa2()" onmouseout="removeblur2()">
+                <h1 onmouseenter="blurCaixa2()" onmouseout="removeblur2()"> serviçõs oferecidos</h1>
+                <p onmouseenter="blurCaixa2()" onmouseout="removeblur2()">Tenho muita facilidade com html é css, com minha linguagem de programação principal sendo o javascript.
+                    <br>
+                    Até agora tenho pouco conhecimento em php ou outras linguagens relacionadas ao back-and porem pretendo me aprimorar cada vez mais na area. 
+                    <br>
+                    Meu primeiro contato com programação foi com o matlab quando eu estava no ensino medio, é apartir disso foi estudadando e aprendendo cada vez mais</p>
+            </div>
+        </section>
+        <!--caixa de tecnologias-->
+        <section class="area2" onclick="tec()" onmouseenter="caixablurTec()" onmouseout="removeblurTec()" >
+            <h1 class="titulo">Tecnologias</h1>
+            <h2 class="subTitulo">click aqui</h2>
+            <div class="ico_tec"  onmouseout="removeblurTec()" onmouseenter="caixablurTec()">
+                <article>
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation1()" onmouseout="removeTecInformation1()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_css_icon_130661.png" alt="css">
+                    </a>
+                    
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation2()" onmouseout="removeTecInformation2()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_html_icon_130541.png" alt="html">
+                    </a>
+                    
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation3()" onmouseout="removeTecInformation3()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_js_official_icon_130509.png" alt="js">
+                    </a>
+                </article>
+                <article>
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation4()" onmouseout="removeTecInformation4()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_node_icon_130301.png" alt="node">
+                    </a>
+
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation5()" onmouseout="removeTecInformation5()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_php_icon_130266.png" alt="php">
+                    </a>
+
+                    <a href="" class="tecnologiasIconesLink" onmouseenter="tecInformation6()" onmouseout="removeTecInformation6()">
+                        <img  onmouseout="removeblurTec()" onmouseenter="caixablurTec()" class="img_ico" src="imagens/icones tecnologias/file_type_matlab_icon_130398.png" alt="matlab">
+                    </a>
+                </article>
+            </div>
+             <article>
+                <!--texto css-->
+                <p class="sobreAsTecnologias" id="txtcss">É uma linguagem de estilo (en-US) usada para descrever a apresentação de um documento escrito em html ou xml</p>
+                <!--texto html-->
+                <p class="sobreAsTecnologias" id="txthtml">É uma linguagem de marcação utilizada na construção de paginas web, documentos html são interpretados por navegadores web </p>
+                <!--texto js-->
+                <p class="sobreAsTecnologias" id="txtjs">O javascript surgiu como uma tecnologia do lado do navegador para tornar as aplicações web mais dinâmicas</p>
+                <!--texto node-->
+                <p class="sobreAsTecnologias" id="txtnode">Node.js é um software de codigo aberto, multiplataforma, baseado no interpretador v8 do google e que permite a execução de codigos javascript fora do navegador web</p>
+                <!--texto php-->
+                <p class="sobreAsTecnologias" id="txtphp">É uma linguagemde do tipo server-side com diversos propósitos. mais sua principal função e gerar codigos dinamicos no site</p>
+                <!--texto matlab-->
+                <p class="sobreAsTecnologias" id="txtmat">um software com uma linguagem propria voltado para o cálculo numérico</p>
+
+             </article>
+        </section>
+    <footer class="mostrar">
+        <div class="sub_div_ft">
+            <p id="txt_ft">entre em contato com qualquer uma das redes sociais disponiveis e vamos trabalhar juntos em projetos que possam revolucionar o mercado, estou pronto para dar meu melhor programando para você</p>
+            <!--github-->
+            <a href="https://github.com/migu3ll1"><img src="imagens/github_logo_icon_145252.png" alt="icone do github" class="ico"></a>
+            <!--linkedin-->
+            <a href="https://www.linkedin.com/in/miguel-alves-018357257/"><img src="imagens/linkedin_logo_icon_147268.png" alt="icone do linkedin" class="ico"></a>
+        </div>
+        <!--fotode perfil--><img src="imagens/WhatsApp Image 2023-04-07 at 08.56.06.jpeg" alt="foto perfil" class="ft_perfil">
+        <b><a href="https://www.linkedin.com/in/miguel-alves-018357257/" class="contato_mobile">Entre em contato aqui, é vamos trabalhar juntos</a></b>
+    </footer>
+</body>
+</html>

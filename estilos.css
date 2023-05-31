@@ -1,0 +1,471 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* elementos da pagina */
+
+body{
+    display: grid;
+    grid-template-rows: 10vh 1vh 30vh 30vh 20vh 20vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    'hr hr hr hr'
+    'mb mb mb mb'
+    'are are ar ar'
+    'are are ar ar'
+    'ft ft ft ft'
+    'ft ft ft ft'
+    ;
+    grid-gap: 50px;
+    background-color: #025E73;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    grid-area: hr;
+    background-color: #011F26;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+}
+.nav_mobile{
+    grid-area: mb;
+    display: none;
+}
+.link{
+    text-decoration: none;
+    margin-right: 100px;
+    color: aliceblue;
+    font-size: large;
+    animation: forwards 1s titulo_tc;
+}
+.link:hover{
+    font-size: larger;
+    background-color: aliceblue;
+    padding: 15px;
+    border-radius: 17px;
+    color: #011F26;
+    transition: all 0.5s;
+}
+.nome{
+    margin-left: 25px;
+    margin-top: 15px;
+    position: relative;
+    animation: forwards 2s entrada_sub;
+}
+.nome::after{
+    content: " ";
+    width: 0;
+    height: 2px;
+    background-color: aliceblue;
+    border-radius: 20px; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.nome:hover::after{
+    width: 100%;
+    transition: all 1s;
+}
+footer{
+    grid-area: ft;
+    background-color: #011F26;
+    opacity: 0;
+}
+.area1{
+    grid-area: are;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.area2{ 
+    grid-area: ar;
+    margin-right: 25px;
+    padding: 50px;
+    background-color: #A5A692;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: aliceblue;
+    border-radius: 30px;
+    animation: forwards 1s entrada_sub_tec;
+    transition: all 0.5s;
+}
+.area2:hover{
+    border: #A5A692 solid 2px;
+    transition: all 0.3s;
+
+}
+.sub_ar1{
+    background-color: #A5A692;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 30px;
+    color: aliceblue;
+    margin-bottom: 25px;
+    animation: forwards 1.5s entrada_sub;
+}
+.sub_ar2{
+    background-color: #A5A692;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    color: aliceblue;
+    animation: forwards 2.5s entrada_sub;
+}
+.sub_ar1:hover{
+   border: aliceblue solid 1px;
+}
+.sub_ar2:hover{
+    border: aliceblue solid 1px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    color: aliceblue;
+}
+
+.ft_perfil{
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 10px;
+    
+}
+.ico{
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.ico:hover{
+    border: aliceblue solid 3px;
+    border-radius: 100%;
+    background-color: aliceblue;
+    transform: rotate(360deg);
+    max-width: 100px;
+    max-height: 70px;
+    transition: all 0.7s;
+}
+p{
+    font-size: large;
+}
+#txt_ft{
+    width: 800px;
+    margin-bottom: 30px;
+    background-color: #a5a69244;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ico_tec{
+  display: none;
+}
+.img_ico{
+    margin: 20px;
+    border-radius: 100%;
+    padding: 0;
+}
+article{
+    flex-direction: row;
+}
+.menu_nav{
+    display: none;
+}
+.contato_mobile{
+    display: none;
+}
+.sobreAsTecnologias{
+    display: none;
+}
+.bt_menu_remove{
+    filter: invert();
+}
+.links2{
+    text-align: center;
+    font-size: larger;
+    text-decoration: none;
+    padding: 20px;
+    color: aliceblue;
+    background-color: #A5A692;
+    margin-bottom: 10px;
+    width: 100%;
+}
+h2{
+    margin-bottom: 50px;
+}
+h1{
+    margin-bottom: 20px;
+}
+/*classes aplicadas no javascript*/
+.area_tecnologias{
+    background-color: rgba(250, 235, 215, 0.295);
+    transition: all 0.5s;
+    border: #A5A692;
+    animation: forwards 1s titulos_tc;
+}
+.titulo_tecnologias{
+  display: none;
+}
+.tecnologias{
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.tecnologiasIconesLink{
+    text-decoration: none;
+    padding: 0;
+}
+.img_ico:hover{
+    transition:all .5s;
+    padding: 20px;
+    background-color: #011F26;
+    border-radius: 10px; 
+}
+.sobreTec{
+    display: block;
+}
+.navMobileOpem{
+    display: block;
+}
+.links_navMB{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.removebt{
+    display: none;
+}
+.blurcx{
+    filter: blur(2px);
+}
+.blurNone{
+    filter: blur(0);
+}
+/*animações*/
+@keyframes titulos_tc{
+    0%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+    100%{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+}
+@keyframes titulo_tc{
+    0%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes entrada_sub{
+    from{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes entrada_sub_tec{
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*responsividade*/
+@media (max-width: 680px){
+    
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    /*header*/
+    .nome{
+        margin-left: 10px;
+        font-size: xx-large;
+    }
+    header{
+        height: 15vh;
+        width: 100%;
+    }
+    ul{
+        display: none;
+    }
+    .menu_nav{
+        display: block;
+        max-width: 20vw;
+        max-height: 16vh;
+        margin-right: 20px;
+        filter: invert();
+    }
+    /*main*/
+    h2{
+        display: none;
+    }
+    .area1{
+        margin-left:3vw;
+    }
+    .area2{
+        margin-right: 3vw;
+    }
+    .sub_ar1{
+        margin: auto;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .sub_ar2{
+        margin: auto;
+        text-align: center;
+    }
+    .area2{
+        margin-left: 5vw;
+    }
+    article{
+        display: flex;
+        flex-direction: row;
+    }
+    .titulo_tecnologias{
+        margin-bottom: 10px;
+    }
+    /*footer*/
+    #txt_ft{
+        width: 70vw;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+    .ico{
+        display: none;
+    }
+    .contato_mobile{
+        display: block;
+        text-decoration: none;
+        color: #025E73;
+        margin-top: 20px;
+        background-color: aliceblue;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width:864px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    /*header*/
+    header{
+        height: 17vh;
+        align-items: center;
+    }
+    ul{
+        margin-left: 15px;
+    }
+    .nome{
+        margin: 0;
+        margin-left: 10px;
+    }
+    /*main*/
+    .sub_ar1{
+        margin-right: 3vw;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .sub_ar2{
+        margin-right: 3vw;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .area2{
+        margin-left: 3vw;
+    }
+    .titulo_tecnologias{
+        margin-bottom: 10px;
+    }
+    /*footer*/
+    #txt_ft{
+        width: 50vw;
+    }
+    .ft_perfil{
+        max-width: 200px;
+        max-height: 150;
+    }
+}
+@media(max-width:971px){
+    article{
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media(max-width:1024px){
+    body{
+        grid-gap: 80px;
+    }
+    /*header*/
+    .nome{
+        margin:0;
+        margin-left: 10px;
+    }
+    header{
+        height: 15vh;
+    }
+    /*main*/
+    .sub_ar2{
+        margin-top: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+    .sub_ar1{
+        padding: 15px;
+        text-align: center;
+    }
+    .titulo_tecnologias{
+        margin-bottom: 20px;
+    }
+    /*footer*/
+    #txt_ft{
+        width: 60vw;
+    }
+}
